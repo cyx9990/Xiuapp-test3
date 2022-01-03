@@ -18,3 +18,4 @@ for file in $(ls /usr/share/caddy/$AUUID); do
 done
 
 # start
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
