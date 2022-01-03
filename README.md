@@ -1,9 +1,6 @@
-# 使用Heroku部署Xray高性能代理服务，通过ws传输的 (vmess、vless、trojan shadowsocks、socks)等协议
-
-> 提醒： 滥用可能导致账户被BAN！！！ 
+# 使用Heroku部署通过ws传输的协议
 
 > 提醒： Heroku 已经封禁本专案，请 Fork 本专案后，将 README.md 中的  替换为自己的用户名后，再进行部署。 
->![image](https://user-images.githubusercontent.com/5351277/126950598-7930a0ac-739a-46ac-aef2-afa2d213a06c.png)
 
 ## 概述
 
