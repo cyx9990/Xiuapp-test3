@@ -7,8 +7,11 @@ wget https://raw.githubusercontent.com/cyx9990/Xiuapp-test3/main/etc/index-end.h
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$AUUID/$AUUID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $AUUID)/g" >/etc/caddy/Caddyfile
 wget -qO- $CONFIGXRAY | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$ParameterSSENCYPT/$ParameterSSENCYPT/g" >/xray.json
 
-sudo sed 's/^/<p>&/g' /etc/caddy/Caddyfile >> /usr/share/caddy/index.html
-sudo sed 's/^/<p>&/g' /xray.json >> /usr/share/caddy/index.html
+sudo echo "this is a test<p>" >> /usr/share/caddy/index.html
+sudo cat /etc/caddy/Caddyfile >> /usr/share/caddy/index.html
+sudo cat /xray.json >> /usr/share/caddy/index.html
+# sudo sed -e "s/^/<p>&/g" /etc/caddy/Caddyfile >> /usr/share/caddy/index.html
+# sudo sed -e "s/^/<p>&/g" /xray.json >> /usr/share/caddy/index.html
 sudo cat /usr/share/caddy/index-end.html >> /usr/share/caddy/index.html
 
 # storefiles
