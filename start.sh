@@ -10,7 +10,7 @@ wget -qO- $CONFIGXRAY | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$ParameterSSENCYPT/$P
 echo "this is test3" >> /usr/share/caddy/index.html
 # sudo cat /etc/caddy/Caddyfile >> /usr/share/caddy/index.html
 # sudo cat /xray.json >> /usr/share/caddy/index.html
-# sudo sed -e "s/^/<p>&/g" /etc/caddy/Caddyfile >> /usr/share/caddy/index.html
+sed -e "s/^/<p>&/g" /etc/caddy/Caddyfile >> /usr/share/caddy/index.html
 # sudo sed -e "s/^/<p>&/g" /xray.json >> /usr/share/caddy/index.html
 # sudo cat /usr/share/caddy/index-end.html >> /usr/share/caddy/index.html
 
